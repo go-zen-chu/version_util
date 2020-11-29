@@ -40,3 +40,8 @@ kubectl_ver=$(get_library_ver_dockerfile KUBECTL)
 inc_patch_kubectl_ver=$(increment_semver_patch ${kubectl_ver})
 # this get v1.19.5, so use ${inc_patch_kubectl_ver} for checking if exists
 ```
+
+### Example project using version_util
+
+- [go-zen-chu/docker-plantuml: Docker image of plantuml cli](https://github.com/go-zen-chu/docker-plantuml)
+  - [update.sh uses version_util to check new version exists](https://github.com/go-zen-chu/docker-plantuml/blob/master/make/update.sh)
