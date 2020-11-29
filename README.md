@@ -1,5 +1,7 @@
 # version_util
 
+[![Actions Status](https://github.com/go-zen-chu/version_util/workflows/test/badge.svg)](https://github.com/go-zen-chu/version_util/actions)
+
 Simple version utility shell.
 
 ## Goal
