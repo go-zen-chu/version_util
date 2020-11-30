@@ -7,8 +7,8 @@ set -u
 function get_library_ver_dockerfile () {
     # set arg like JAVA
     library_capital_name=$1
-    docker_file_path=$2
-    docker_file_path="${docker_file_path:-Dockerfile}"
+    # optional arg. If 2nd arg is not given, use Dockerfile
+    docker_file_path="${2-Dockerfile}"
     # TIPS: create regex pattern and use in match
     current_version=$(awk -v pat="ARG ${library_capital_name}_VERSION=\"(.*)\"" 'match($0, pat, m) {
         print m[1];
